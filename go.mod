@@ -1,4 +1,4 @@
-module studyecho
+module github.com/polaris1119/echo-login-example
 
 go 1.13
 
