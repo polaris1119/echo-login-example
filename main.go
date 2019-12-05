@@ -18,7 +18,7 @@ var cookieStore = sessions.NewCookieStore([]byte("studyecho"))
 func init() {
 	rand.Seed(time.Now().UnixNano())
 
-	os.Mkdir("log", 0644)
+	os.Mkdir("log", 0755)
 }
 
 func main() {
@@ -46,7 +46,7 @@ func configLogger(e *echo.Echo) {
 	// 定义日志级别
 	e.Logger.SetLevel(log.INFO)
 	// 记录业务日志
-	echoLog, err := os.OpenFile("log/echo.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	echoLog, err := os.OpenFile("log/echo.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0755)
 	if err != nil {
 		panic(err)
 	}
