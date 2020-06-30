@@ -39,7 +39,7 @@ func main() {
 	RegisterRoutes(e)
 
 	// 启动服务
-	e.Logger.Fatal(e.Start(":2019"))
+	e.Logger.Fatal(e.Start(":2020"))
 }
 
 func configLogger(e *echo.Echo) {
